@@ -16,8 +16,12 @@ p = zeros(m, 1);
 %
 
 
-
-
+aux = sigmoid(X*theta);
+for i=1:m
+	if aux(i,1) > 0.5
+		p(i,1) = 1;
+	end
+end;
 
 
 

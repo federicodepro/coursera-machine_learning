@@ -21,7 +21,10 @@ grad = zeros(size(theta));
 %
 
 
+linealFunction = X*theta;
 
+J=sum(-y.*log(sigmoid(linealFunction))-(1-y).*log(1-sigmoid(linealFunction)))/m;
+grad = sum((sigmoid(linealFunction) - y).*X)/m;
 
 
 
