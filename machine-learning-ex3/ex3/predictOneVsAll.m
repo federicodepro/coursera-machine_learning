@@ -31,11 +31,8 @@ X = [ones(m, 1) X];
 %
 
 results = all_theta*X';
-for i=1:m
-    [max, pos] = max(results(:,int8(i)));
-    p(i,1)= pos;
-end
-
+[maximos, p] = max(results);
+p = p';
 % =========================================================================
 
 
